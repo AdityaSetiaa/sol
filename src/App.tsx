@@ -1,5 +1,3 @@
-import { useState } from 'react'
-import { Player } from './components/Player.tsx'
 
 import Front from './components/Front.tsx'
 function App() {

@@ -1,4 +1,3 @@
-import React from 'react'
 import { usePlayer } from '../Context/PlayerContext'
 
 interface SongItemsProps {
