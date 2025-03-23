@@ -1,16 +1,15 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Navbar from './components/Navbar';
+import { Player } from './components/Player.tsx'
 
+import Front from './components/Front.tsx'
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
    
-       <main className="min-h-screen flex bg-gradient-to-r from-slate-900 to-slate-950 text-while text-white text-sm sm:text-base">
-        <Navbar/>
-       </main>
+       <div className="font-jura min-h-screen align-middle flex bg-gradient-to-tr from-black to-red-950 overflow-hidden">
+        <Front/>
+
+       </div>
    
   )
 }

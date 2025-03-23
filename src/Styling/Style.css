@@ -1,1 +1,85 @@
 @import "tailwindcss";
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Edge */
+  }
+  
+  .scrollbar-hidden {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .gradient-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    transition: left 0.5s ease;
+  }
+
+  .gradient-overlay:hover::before {
+    left: 100%;
+  }
+
+  .input-container {
+    position: relative;
+    width: 300px;
+    margin: 50px auto;
+  }
+
+  #input-container input {
+    width: 90%;
+    padding-left: 40px; 
+    font-size: 16px;
+    border-radius: 60px;
+    height: 40px;
+    box-sizing: border-box;
+  }
+
+  #input-container img {
+    left: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none; 
+  }
+
+  #display img{
+    width: 150px;
+    height: 130px;
+    object-fit: cover;
+    justify-content: space-evenly;
+    margin-top: 10px;
+  }
+  #display{
+    display: flex;
+    justify-content: space-evenly;
+    
+  }
+  #display h1{
+    font-size: 20px;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+
+  #items{
+    text-overflow:ellipsis
+  }
