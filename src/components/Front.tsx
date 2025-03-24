@@ -1,6 +1,5 @@
-import React from 'react'
 import '../Styling/Style.css'
-import { NavLink } from 'react-router'
+import { NavLink } from 'react-router-dom'
 
 
 export default function Front() {
