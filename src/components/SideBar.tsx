@@ -1,17 +1,29 @@
-
+import { useState } from 'react'
+import { usePlayer } from '../Context/PlayerContext'
+import { NavLink } from 'react-router-dom'
 function SideBar() {
+  const [playlist, setPlaylist]= useState<any>([])
+  const play = usePlayer()
+  const createPlaylist = (value:string) =>{
+    setPlaylist([...playlist, value])
+
+  }
+    
+  
   return (
     <div className='w-[20%] h-[86%] p-2 flex-col gap-2 text-white hidden lg:flex'>
     
     
       <div className='bg-black h-[15%] rounded flex flex-col justify-around border-2 border-red-950'>
         <div className='flex item-center gap-3 pl-8 cursor-pointer'>
+        <NavLink to={'/Home'} className='font-bold'>Home</NavLink>
             {/* <img className='w-6' src={assets.home_icon} alt='home_icon'/> */}
-            <p className='font-bold'>Bookmarks</p>
+           
         </div>
         <div className='flex item-center gap-3 pl-8 cursor-pointer'>
             {/* <img className='w-6' src={assets.search_icon} alt='home_icon'/> */}
-            <p className='font-bold'>Liked</p>
+            
+            <NavLink to={'/Added'} className='font-bold'>Liked</NavLink>
         </div>
       </div>
       <div className='bg-black h-[100%] rounded border-2 border-red-950 '>

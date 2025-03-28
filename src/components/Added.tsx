@@ -1,9 +1,9 @@
 import SideBar from "./SideBar";
-import {Player} from "./Player.tsx";
+// import {Player} from "./Player.tsx";
 import Header from "./Header.tsx";
-import Display from "./Display.tsx";
 import Side from "./Side.tsx";
-function Home() {
+import DisplayAdded from "./DisplayAdded.tsx";
+function Added() {
   return (
     <div>
       <div className="overflow bg-gradient-to-tr from-black to-red-950 duration-300">
@@ -13,7 +13,7 @@ function Home() {
               
                 <div className="flex w-[100%] h-[90%] ">
                 <SideBar/>
-                <Display/>
+                <DisplayAdded/>
                 <Side/>
                 </div>
                 
@@ -25,4 +25,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Added;

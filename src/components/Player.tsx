@@ -15,40 +15,41 @@ import loop from '../assets/loop.png'
 import shuffle from '../assets/shuffle.png'
 import { usePlayer } from '../Context/PlayerContext'
 
-export const Player =()=> {
+export const Player =(props:any)=> {
   const players:any = usePlayer()
   
   return <div>
       {
         players.player.name?
-        <div className='w-auto mt-[-6%] h-35 gap-4 bg-black flex items-center text-white'>
+        <div className='w-auto mt-[-8%] h-40 gap-4 bg-black flex items-center text-white'>
          <div className='flex items-center ml-8'>
-        <img className='w-25 h-25' src={players.player.image} alt={players.player.name}/>
+        <img className='w-25 h-25' src={players.trackIndex.image} alt={players.trackIndex.name}/>
         <div className='ml-3 mt-5'>
-        <p className='font-bold mt-10'>{players.player.name}</p>
-        <p className='text-slate-200'>{players.player.disc}</p>
+        <p className='font-bold mt-10'>{players.trackIndex.name}</p>
+        <p className='text-slate-200'>{players.trackIndex.disc}</p>
+        <button className='ml-40 fixed text-4xl mt-[-2.5%]' onClick={()=>players.setItems([...players.items,{image:props.trackIndex.image , name:props.trackIndex.name, disc:props.trackIndex.disc }])}>+</button>
         </div>
 
             </div>
         <div className='fixed ml-220 mr-20 mt-[-2%] p-4 justify-center w-auto flex gap-4 duration-300'>
-                <img className='w-4 cursor-pointer' src={shuffle} alt="" />
-                <img className='w-4 cursor-pointer' src={prev} alt="" />
-              <div className='duration-400'> {players.status? 
+                <img className='w-4 cursor-pointer' onClick={players.random} src={shuffle} alt="" />
+                <img className='w-4 cursor-pointer' onClick={players.prev}src={prev} alt="" />
+              <div> {players.status? 
                 <img onClick={players.pause} className='w-4 cursor-pointer' src={pause} alt="" />:
                 <img onClick={players.play} className='w-4 cursor-pointer' src={play} alt="" />
 }</div>
-                <img className='w-4 cursor-pointer' src={next} alt="" />
+                <img className='w-4 cursor-pointer' onClick={players.next} src={next} alt="" />
                 <img className='w-4 cursor-pointer' src={loop} alt="" />
                 <audio id="audio" ref={players.audioRef} src={players.trackIndex.file}  autoPlay></audio>
                 
             </div>
            <div className='fixed ml-179 mt-4 flex items-center gap-2'>
-            <div>0.00</div>
+            <div>{players.time.currentTime.min}:{players.time.currentTime.sec}</div>
            <div ref=
-          {players.seekFill}className='w-110 bg-slate-50 h-1 rounded'>
+          {players.seekFill}className='w-110 bg-slate-50 h-1 rounded fixed ml-8'>
                 <div ref={players.seekBar}className='w-1 h-1 bg-red-900 rounded'></div>
            </div>
-           <div className='text-white'>{players.player.duration}</div>
+           <div className='text-white fixed ml-120'>{players.trackIndex.duration}</div>
 
            </div>
             <div className='hidden absolute right-0 lg:flex items-center gap-2 opacity-65 ml-10 mr-5'>
