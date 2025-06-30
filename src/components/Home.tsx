@@ -1,5 +1,4 @@
 import SideBar from "./SideBar";
-import {Player} from "./Player.tsx";
 import Header from "./Header.tsx";
 import Display from "./Display.tsx";
 import Side from "./Side.tsx";
