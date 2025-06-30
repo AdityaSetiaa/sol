@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { usePlayer } from '../Context/PlayerContext'
+
 import { NavLink } from 'react-router-dom'
 function SideBar() {
   const [playlist, setPlaylist]= useState<any>([])
-  const play = usePlayer()
+  
   const createPlaylist = (value:string) =>{
     setPlaylist([...playlist, value])
 
