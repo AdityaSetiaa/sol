@@ -2,12 +2,7 @@ import { useState } from 'react'
 
 import { NavLink } from 'react-router-dom'
 function SideBar() {
-  const [playlist, setPlaylist]= useState<any>([])
   
-  const createPlaylist = (value:string) =>{
-    setPlaylist([...playlist, value])
-
-  }
     
   
   return (
