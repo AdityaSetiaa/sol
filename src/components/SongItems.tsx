@@ -12,8 +12,8 @@ function SongItems({image, name, disc, duration, id}: SongItemsProps) {
   const players:any = usePlayer()
   const {songId} = players
   return (
-    <div className='backdrop-blur rounded flex flex-col duration-500
-          h-auto border-red-950 border-2 p-5 py-0.5 hover:shadow-2xl hover:shadow-red-700 hover:duration-600 hover:border-red-600 ' onClick={()=>players.setPlayer({name, image, disc , duration, id},songId(id))
+    <div  className='backdrop-blur w-40 rounded flex flex-col duration-500
+          h-auto border-red-950 border-2 p-5 py-0.5 hover:duration-400 hover:border-red-600 item-edit ' onClick={()=>players.setPlayer({name, image, disc , duration, id},songId(id))
 
           } >
     <img className='rounded border-[100%] hover:size-90 ' height="40px" width="40px" src={image} alt={name}/>

@@ -4,7 +4,7 @@ function App() {
 
   return (
    
-       <div className="font-jura min-h-screen align-middle flex bg-gradient-to-tr from-black to-red-950 overflow-hidden">
+       <div className="font-jura w-screen min-h-screen align-middle flex bg-gradient-to-tr from-black to-red-950 overflow-hidden">
         <Front/>
 
        </div>

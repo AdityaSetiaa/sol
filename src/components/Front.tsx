@@ -20,7 +20,7 @@ export default function Front() {
     </NavLink>
     <span className="text-white font-bold">/</span>
     <NavLink
-      to="/signup"
+      to="/login"
       className="text-white font-bold hover:text-4xl hover:duration-300"
     >
       sign<span className="text-red-500">up</span>

@@ -12,6 +12,7 @@ import { Player } from './components/Player.tsx'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
+    
     <PlayerContext>
       <Routes>
         <Route path='/' element={<App/>}/>

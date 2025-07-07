@@ -7,7 +7,7 @@ function Header() {
   
   return (
     <div className='flex flex-col'>
-        <div className='w-full h-20  bg-black flex items-center justify-between'>
+        <div className='w-full h-18  bg-black flex items-center justify-between'>
             <NavLink to={'/home'}> <img src={sol} alt="sol" className='w-30 ml-4 rounded-4xl'/></NavLink>
            
         </div>

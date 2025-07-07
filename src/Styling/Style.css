@@ -39,15 +39,12 @@
     left: 100%;
   }
 
-  .input-container {
-    position: relative;
-    width: 300px;
-    margin: 50px auto;
+  #input-container {
+    margin: 4px;
   }
 
   #input-container input {
-    width: 90%;
-    padding-left: 40px; 
+    width: auto; 
     font-size: 16px;
     border-radius: 60px;
     height: 40px;
@@ -56,7 +53,7 @@
 
   #input-container img {
     left: 10px;
-    transform: translateY(-50%);
+    
     width: 20px;
     height: 20px;
     pointer-events: none; 
@@ -69,13 +66,11 @@
     justify-content: space-evenly;
     margin-top: 10px;
   }
-  #display{
-    display: flex;
-    justify-content: space-evenly;
+  
     
-  }
+  
   #display h1{
-    font-size: 20px;
+    font-size: 10px;
     margin-top: 10px;
     overflow: hidden;
   }
@@ -84,4 +79,6 @@
     text-overflow:ellipsis
   }
   
-  
+  .item-edit{
+    font-size: 12px;
+  }

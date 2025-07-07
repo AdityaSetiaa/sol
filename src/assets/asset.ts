@@ -1,4 +1,4 @@
-
+import play from "./play.png"
 import me from './me.jpeg'
 import zeninToji from './zeninToji.jpeg'
 import DeathFlower from './DeathFlower.jpeg'
@@ -131,3 +131,7 @@ export const songsData = [
 //         duration:"2:35"
 //     }
 // ]
+
+export const assetimg = [
+    play
+]
